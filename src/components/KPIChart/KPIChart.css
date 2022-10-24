@@ -1,0 +1,25 @@
+.KPIChart {
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+}
+
+.KPIChart-label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-weight: bold;
+}
+
+.legend-info {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 60px;
+    display: block;
+}
+
+.percentage {
+    font-weight: bolder;
+}

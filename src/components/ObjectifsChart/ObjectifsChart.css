@@ -1,0 +1,23 @@
+.ObjectifsChart {
+    background-color: var(--red);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.dureeSession {
+    height: 40px;
+    text-align: left;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    color: white;
+}
+
+.ObjectifsChart .custom-tooltip {
+    background-color: white;
+    outline: "none";
+    padding: 0.2rem 0.5rem;
+}
+
+.ObjectifsChart .custom-tooltip p {
+    margin: 0;
+}

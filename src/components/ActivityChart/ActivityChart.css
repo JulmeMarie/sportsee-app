@@ -1,0 +1,52 @@
+.ActivityChart {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+    box-sizing: border-box;
+    width: 630px;
+}
+
+.barchart-details {
+    width: 100%;
+    position: relative;
+    height: 4rem;
+}
+
+.barchart-name {
+    position: absolute;
+    left: 1rem;
+    font-weight: bolder;
+}
+
+.barchart-labels {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+}
+
+.disk {
+    margin-top: 0.3rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: black;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.label-calories {
+    margin-left: 2rem;
+}
+
+.label-calories .disk {
+    background-color: red;
+}
+
+.ActivityChart .custom-tooltip {
+    padding: 0.5rem;
+    background-color: red;
+    color: white;
+    outline: "none";
+}

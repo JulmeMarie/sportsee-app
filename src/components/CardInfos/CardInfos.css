@@ -1,0 +1,32 @@
+.CardInfos {
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    border-radius: 5px;
+    background-color: #FBFBFB;
+}
+
+.CardInfos-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.CardInfos-details {
+    margin-left: 1rem;
+}
+
+.CardInfos-value {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.CardInfos-name {
+    text-transform: capitalize;
+}

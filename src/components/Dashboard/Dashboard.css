@@ -1,0 +1,30 @@
+.Dashboard {
+    width: 95%;
+    padding: 1rem 3rem;
+    box-sizing: border-box;
+}
+
+.main-section {
+
+    float: left;
+}
+
+.right-section {
+    float: left;
+    width: 130px;
+    margin-left: 1.5rem;
+}
+
+.ActivityChart {
+    width: 100%;
+}
+
+.ObjectifsChart,
+.PerformanceChart,
+.KPIChart {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 5px;
+}

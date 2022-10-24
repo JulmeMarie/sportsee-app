@@ -1,0 +1,9 @@
+.Salutation {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.Salutation h1 span {
+    color: red;
+}

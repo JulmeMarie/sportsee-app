@@ -1,0 +1,6 @@
+.PerformanceChart {
+    background-color: var(--red);
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: var(--cinder);
+}
