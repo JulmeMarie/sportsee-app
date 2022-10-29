@@ -13,6 +13,7 @@ To start this project, you must run the command npm run start. In this documenta
 - [NodeJS (**version 16.13.0**)](https://nodejs.org/en/)
 - [React (**version 18.2.0**)](https://en.react.org)
 - [Yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/)
 
 If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
@@ -20,8 +21,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 - Fork the repository
 - Clone it on your computer.
-- The `yarn` command will allow you to install the dependencies.
-- The `yarn dev` command will allow you to run the micro API.
+- The `yarn` or `npm` command will allow you to install the dependencies.
 
 ## 3. Endpoints
 
