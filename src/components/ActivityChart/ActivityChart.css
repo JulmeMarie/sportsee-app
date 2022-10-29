@@ -4,13 +4,14 @@
     border-radius: 5px;
     background-color: #FBFBFB;
     box-sizing: border-box;
-    width: 630px;
+    width: 100%;
 }
 
 .barchart-details {
     width: 100%;
     position: relative;
     height: 4rem;
+    box-sizing: border-box;
 }
 
 .barchart-name {
@@ -23,7 +24,7 @@
     display: flex;
     flex-direction: row;
     position: absolute;
-    right: 0;
+    right: 5%;
 }
 
 .disk {

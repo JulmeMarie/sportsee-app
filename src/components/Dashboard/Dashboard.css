@@ -5,26 +5,31 @@
 }
 
 .main-section {
-
+    width: 75%;
     float: left;
 }
 
 .right-section {
     float: left;
-    width: 130px;
-    margin-left: 1.5rem;
+    width: 23%;
+    margin-left: 2%;
 }
 
 .ActivityChart {
     width: 100%;
 }
 
+
+.flex-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .ObjectifsChart,
 .PerformanceChart,
 .KPIChart {
-    width: 200px;
-    height: 200px;
-    float: left;
-    margin-right: 1rem;
+    width: 32%;
+    height: 25vh;
     border-radius: 5px;
 }

@@ -1,4 +1,4 @@
-import { USER_MAIN_DATA } from '../data/data';
+import { USER_MAIN_DATA_MOCK } from '../store/mockStore';
 import { KPIModel } from '../models/KPIModel';
 import { UserDataModel } from '../models/UserDataModel';
 
@@ -12,7 +12,11 @@ export class UserDataService {
      * @returns a list of users
      */
     getListUsers() {
-        return USER_MAIN_DATA;
+        let users = [
+            { id: 12, firstName: 'Karl' },
+            { id: 18, firstName: 'Cécilia' }
+        ]
+        return users;
     }
 
     /**
@@ -36,6 +40,17 @@ export class UserDataService {
                 reject(err);
             })
         });
+    }
+
+    /**
+    * This method allows to get user data from mock data file
+    * @returns an Array
+    */
+    getUserMainDataMockById() {
+
+        let dataMock = USER_MAIN_DATA_MOCK;
+        let model = new UserDataModel(dataMock.id, dataMock.keyData, dataMock.todayScore, dataMock.userInfos);
+        return model;
     }
 
     /**

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import './ObjectifsChart.css';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { UserAverageSessionService } from '../../services/UserAverageSessionService';
@@ -23,6 +24,10 @@ const ObjectifsChart = (props) => {
 
   useEffect(() => {
     let service = new UserAverageSessionService();
+
+    //Get data from mock
+    //setData(service.getAverageSessionDataMock(props.idUser));
+
     service.getAverageSessionData(props.idUser).then(data => {
       setData(data);
     })
@@ -43,4 +48,8 @@ const ObjectifsChart = (props) => {
   );
 }
 
+ObjectifsChart.propTypes = {
+  idUser: PropTypes.number
+};
+ObjectifsChart.defaultProps = {};
 export default ObjectifsChart;

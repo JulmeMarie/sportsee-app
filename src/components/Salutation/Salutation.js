@@ -1,4 +1,5 @@
 import React from 'react';
+import ProtoTypes from 'prop-types';
 import './Salutation.css';
 
 /**
@@ -15,5 +16,10 @@ const Salutation = (props) => {
     </div>
   );
 }
+
+Salutation.propTypes = {
+  firstName: ProtoTypes.string
+};
+Salutation.defaultProps = {};
 
 export default Salutation;

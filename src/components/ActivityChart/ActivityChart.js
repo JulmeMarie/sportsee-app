@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ActivityChart.css';
+import PropTypes from 'prop-types';
 import { BarChart, ResponsiveContainer, Text, Tooltip, Legend, XAxis, YAxis, Bar, CartesianGrid } from 'recharts';
 import { UserActivityService } from '../../services/UserActivityService';
 
@@ -15,6 +16,9 @@ const ActivityChart = (props) => {
   useEffect(() => {
 
     let service = new UserActivityService();
+
+    //Get data from mock
+    //setData(service.getActivityDataMock());
 
     //Get data from the service
     service.getActivityData(props.idUser).then(data => {
@@ -45,15 +49,23 @@ const ActivityChart = (props) => {
           <div className='label-calories'><div className="disk"></div> Calories brûlées (kCal)</div>
         </div>
       </div>
-      <BarChart width={600} height={200} data={data} >
-        <CartesianGrid strokeDasharray="3 3" vertical={false} />
-        <Bar barSize={10} dataKey="kilogram" unit="kg" fill="#282D30" />
-        <Bar barSize={10} dataKey="calories" unit="kcal" fill="#FF0000" />
-        <XAxis />
-        <YAxis orientation='right' />
-        <Tooltip content={<CustomTooltip />} />
-      </BarChart>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data} >
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+          <Bar barSize={10} dataKey="kilogram" unit="kg" fill="#282D30" />
+          <Bar barSize={10} dataKey="calories" unit="kcal" fill="#FF0000" />
+          <XAxis />
+          <YAxis orientation='right' />
+          <Tooltip content={<CustomTooltip />} />
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 }
+
+ActivityChart.propTypes = {
+  idUser: PropTypes.number
+};
+
+ActivityChart.defaultProps = {};
 export default ActivityChart;

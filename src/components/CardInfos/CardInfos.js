@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import './CardInfos.css';
 
 import { CardInfosService } from '../../services/CardInfosService';
@@ -31,4 +32,11 @@ const CardInfos = (props) => {
     </div>
   );
 }
+
+CardInfos.propTypes = {
+  quantity: PropTypes.number,
+  name: PropTypes.string
+};
+
+CardInfos.defaultProps = {};
 export default CardInfos;

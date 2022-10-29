@@ -7,7 +7,7 @@ export default function Routing(props) {
     return (
         <Routes>
             <Route exact path="/" element={<UserList />} />
-            <Route exact path="/dashboard/:id" element={<Dashboard userData={props.userData} />} />
+            <Route exact path="/dashboard/:userId" element={<Dashboard userData={props.userData} />} />
             <Route path="*" element={<Error404 />} />
         </Routes>
     )

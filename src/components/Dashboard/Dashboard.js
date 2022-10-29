@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { UserDataService } from '../../services/UserDataService';
@@ -16,11 +17,15 @@ import Salutation from '../Salutation/Salutation';
 const Dashboard = () => {
 
   const [data, setData] = useState(null);
-  const { id } = useParams();
+  const { userId } = useParams();
 
   useEffect(() => {
     let service = new UserDataService();
-    service.getUserMainDataById(id).then(data => {
+
+    //Get data from mock
+    //setData(service.getUserMainDataMockById(id));
+
+    service.getUserMainDataById(userId).then(data => {
       setData(data);
     });
   }, []);
@@ -32,9 +37,11 @@ const Dashboard = () => {
           <Salutation firstName={data.userInfos.firstName} />
           <section className='main-section'>
             <ActivityChart idUser={data.id} />
-            <ObjectifsChart idUser={data.id} />
-            <PerformanceChart idUser={data.id} />
-            <KPIChart userScore={data.todayScore} />
+            <div className='flex-wrapper'>
+              <ObjectifsChart idUser={data.id} />
+              <PerformanceChart idUser={data.id} />
+              <KPIChart userScore={data.todayScore} />
+            </div>
           </section>
           <section className='right-section'>
             <CardInfos quantity={data.keyData.calorieCount} name="calories" />
@@ -48,4 +55,6 @@ const Dashboard = () => {
   );
 }
 
+Dashboard.propTypes = {};
+Dashboard.defaultProps = {};
 export default Dashboard;

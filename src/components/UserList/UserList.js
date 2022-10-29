@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { UserDataService } from '../../services/UserDataService';
 /**
  * The component displays the USerList of the User
+ * This is for developpment purpose
  * @returns 
  */
 const UserList = () => {
@@ -21,7 +22,7 @@ const UserList = () => {
         {
           usersList.map(
             (user) => <li key={user.id}>
-              <Link to={"/dashboard/" + user.id}> {user.userInfos.firstName} </Link>
+              <Link to={"/dashboard/" + user.id}> {user.firstName} </Link>
             </li>
           )
         }

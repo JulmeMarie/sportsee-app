@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ProtoTypes from 'prop-types'
 import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import './PerformanceChart.css';
 import { UserPeformanceService } from '../../services/UserPerformanceService';
@@ -12,6 +13,10 @@ const PerformanceChart = (props) => {
 
   useEffect(() => {
     let service = new UserPeformanceService();
+
+    //Get data from mock
+    //setData(service.getDataMockByUserId(props.idUser));
+
     service.getDataByUserId(props.idUser).then(data => {
       setData(data);
     })
@@ -34,4 +39,8 @@ const PerformanceChart = (props) => {
   );
 }
 
+PerformanceChart.propTypes = {
+  idUser: ProtoTypes.number
+};
+PerformanceChart.defaultProps = {};
 export default PerformanceChart;

@@ -1,5 +1,5 @@
 import { PerformanceModel } from '../models/PerformanceModel';
-
+import { USER_PERFORMANCE_MOCK } from '../store/mockStore';
 /**
  * This class is used to process user performance
  */
@@ -29,5 +29,19 @@ export class UserPeformanceService {
             })
         })
 
+    }
+
+    /**
+     * MOCK
+     * This method allows to get user performance from mock data file
+     * @returns an Array
+     */
+    getDataMockByUserId() {
+        let kindObject = USER_PERFORMANCE_MOCK.kind;
+        let performances = [];
+        USER_PERFORMANCE_MOCK.data.forEach(performance => {
+            performances.push(new PerformanceModel(performance.value, kindObject[performance.kind]));
+        });
+        return performances;
     }
 }

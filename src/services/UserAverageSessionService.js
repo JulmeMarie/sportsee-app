@@ -1,4 +1,4 @@
-import { USER_AVERAGE_SESSIONS } from '../data/data';
+import { USER_AVERAGE_SESSIONS_MOCK } from '../store/mockStore';
 import { ObjectifModel } from '../models/ObjectifModel';
 
 /**
@@ -36,5 +36,17 @@ export class UserAverageSessionService {
                 console.log("Erreur while calling the back")
             })
         });
+    }
+
+    /**
+     * This method allows to get user data from the data mock file
+     * @returns an Array
+     */
+    getAverageSessionDataMock() {
+        let theObjectives = [];
+        USER_AVERAGE_SESSIONS_MOCK.sessions.forEach(session => {
+            theObjectives.push(new ObjectifModel(this.getDay(session.day), session.sessionLength));
+        });
+        return theObjectives;
     }
 }

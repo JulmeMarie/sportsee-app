@@ -1,8 +1,8 @@
 .CardInfos {
     display: flex;
     flex-direction: row;
-    width: 180px;
-    margin-bottom: 2rem;
+    width: 200px;
+    margin-bottom: 3rem;
     padding: 1rem;
     box-sizing: border-box;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import './LeftNav.css';
+import PropTypes from 'prop-types';
 import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import PoolIcon from '@mui/icons-material/Pool';
 import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
@@ -22,4 +23,6 @@ const LeftNav = () => (
   </div>
 );
 
+LeftNav.propTypes = {};
+LeftNav.defaultProps = {};
 export default LeftNav;

@@ -1,4 +1,5 @@
 import React from 'react';
+import ProtoTypes from 'prop-types';
 import './TopNav.css';
 import logo from '../../logo.png';
 import { Link } from 'react-router-dom';
@@ -21,4 +22,6 @@ const TopNav = () => {
   );
 }
 
+TopNav.propTypes = {};
+TopNav.defaultProps = {};
 export default TopNav;
