@@ -17,8 +17,8 @@ const ActivityChart = (props) => {
 
     let service = new UserActivityService();
 
-    //Get data from mock
-    //setData(service.getActivityDataMock());
+    //Get data from mock 
+    // setData(service.getActivityDataMock()); 
 
     //Get data from the service
     service.getActivityData(props.idUser).then(data => {
