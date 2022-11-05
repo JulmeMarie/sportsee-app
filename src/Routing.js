@@ -1,14 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import Error404 from './components/error404/Error404';
 import Dashboard from './components/Dashboard/Dashboard';
-import UserList from './components/UserList/UserList';
 
 export const Routing = () => {
     return (
         <Routes>
-            <Route exact path="/" element={<UserList />} />
             <Route exact path="/dashboard/:userId" element={<Dashboard />} />
-            <Route path="*" element={<Error404 />} />
         </Routes>
     )
 }

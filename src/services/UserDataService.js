@@ -8,18 +8,6 @@ import { UserDataModel } from '../models/UserDataModel';
 export class UserDataService {
 
     /**
-     * This method allows to get users list
-     * @returns a list of users
-     */
-    getListUsers() {
-        let users = [
-            { id: 12, firstName: 'Karl' },
-            { id: 18, firstName: 'Cécilia' }
-        ]
-        return users;
-    }
-
-    /**
      * This method allows to get user data
      * @param {Number} userId 
      * @returns a Promise
