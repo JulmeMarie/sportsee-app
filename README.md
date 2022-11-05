@@ -15,7 +15,6 @@ To start this project, you must run the command npm run start. In this documenta
 - [Yarn](https://yarnpkg.com/)
 - [npm](https://www.npmjs.com/)
 
-If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
 ### 2.2 Launching the project
 
@@ -32,7 +31,7 @@ This project includes one endpoint for that enable users to display the dashboar
 - `http://localhost:3001/dashboard/:userId` - display the dashboard for a user. This first endpoint includes the user activity chart, the user Performance Chart, the user objectives chart, the user todayScore chart, the user key data card, user greeting words with firstname, etc...
 
 
-**Warning, currently while launching the app, we have to chose which user we want to display dashboard for betwen the two users mocked. They have userId 12 and 18 respectively.**
+**Warning, currently while launching the app, we have to chose which user we want to display dashboard for betwen the two users via the URL. They have userId 12 and 18 respectively.**
 
 ### 3.2 Examples of queries
 
