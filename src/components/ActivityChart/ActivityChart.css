@@ -5,7 +5,10 @@
     background-color: #FBFBFB;
     box-sizing: border-box;
     width: 100%;
+    height: 400px;
 }
+
+
 
 .barchart-details {
     width: 100%;
@@ -50,4 +53,10 @@
     background-color: red;
     color: white;
     outline: "none";
+}
+
+@media screen and (max-width: 1024px) {
+    .ActivityChart {
+        height: 250px;
+    }
 }

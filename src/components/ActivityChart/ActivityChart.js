@@ -49,7 +49,7 @@ const ActivityChart = (props) => {
           <div className='label-calories'><div className="disk"></div> Calories brûlées (kCal)</div>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height="80%">
         <BarChart data={data} >
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <Bar barSize={10} dataKey="kilogram" unit="kg" fill="#282D30" />

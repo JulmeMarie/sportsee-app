@@ -1,6 +1,6 @@
 .Dashboard {
-    width: 95%;
-    padding: 1rem 3rem;
+    width: 100%;
+    padding: 1rem 3.5rem;
     box-sizing: border-box;
 }
 
@@ -32,4 +32,10 @@
     width: 32%;
     height: 25vh;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .Dashboard {
+        padding: 1rem 2rem;
+    }
 }

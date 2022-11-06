@@ -28,7 +28,7 @@ const PerformanceChart = (props) => {
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
             <PolarGrid />
-            <PolarAngleAxis dataKey="kind" stroke="#FFFFFF" fontSize={15} />
+            <PolarAngleAxis dataKey="kind" stroke="#FFFFFF" fontSize={window.innerWidth === 1024 ? 9 : 15} />
             <PolarRadiusAxis angle={30} />
             <Radar legendType='none' dataKey="value" stroke="#FF0000" fill="#FF0000" fillOpacity={0.7} />
             <Legend />
