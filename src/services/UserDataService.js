@@ -14,9 +14,12 @@ export class UserDataService {
      */
     getUserMainDataById(userId) {
 
-        let url = "http://localhost:3000/user/" + userId;
-
         return new Promise((resolve, reject) => {
+            /* let dataMock = USER_MAIN_DATA_MOCK;
+            let model = new UserDataModel(dataMock.id, dataMock.keyData, dataMock.todayScore, dataMock.userInfos);
+            resolve(model); */
+
+            let url = "http://localhost:3000/user/" + userId;
             fetch(url).then(response => {
                 response.json().then(data => {
                     let dataFromBack = data.data;
@@ -24,21 +27,9 @@ export class UserDataService {
                     resolve(model);
                 })
             }).catch(err => {
-                console.log(err);
                 reject(err);
             })
         });
-    }
-
-    /**
-    * This method allows to get user data from mock data file
-    * @returns an Array
-    */
-    getUserMainDataMockById() {
-
-        let dataMock = USER_MAIN_DATA_MOCK;
-        let model = new UserDataModel(dataMock.id, dataMock.keyData, dataMock.todayScore, dataMock.userInfos);
-        return model;
     }
 
     /**

@@ -11,9 +11,17 @@ export class UserPeformanceService {
      * @returns a Promise
      */
     getDataByUserId(userId) {
-        let url = "http://localhost:3000/user/" + userId + "/performance";
+
 
         return new Promise((resolve, reject) => {
+            /* let kindObject = USER_PERFORMANCE_MOCK.kind;
+            let performances = [];
+            USER_PERFORMANCE_MOCK.data.forEach(performance => {
+                performances.push(new PerformanceModel(performance.value, kindObject[performance.kind]));
+            });
+            resolve(performances); */
+
+            let url = "http://localhost:3000/user/" + userId + "/performance";
             fetch(url).then(response => {
                 response.json().then(data => {
                     let kindObject = data.data.kind;
@@ -24,24 +32,9 @@ export class UserPeformanceService {
                     resolve(performances);
                 })
             }).catch(error => {
-                console.log(error);
                 reject(error);
             })
         })
 
-    }
-
-    /**
-     * MOCK
-     * This method allows to get user performance from mock data file
-     * @returns an Array
-     */
-    getDataMockByUserId() {
-        let kindObject = USER_PERFORMANCE_MOCK.kind;
-        let performances = [];
-        USER_PERFORMANCE_MOCK.data.forEach(performance => {
-            performances.push(new PerformanceModel(performance.value, kindObject[performance.kind]));
-        });
-        return performances;
     }
 }

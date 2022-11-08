@@ -22,9 +22,6 @@ const Dashboard = () => {
   useEffect(() => {
     let service = new UserDataService();
 
-    //Get data from mock
-    //setData(service.getUserMainDataMockById(id));
-
     service.getUserMainDataById(userId).then(data => {
       setData(data);
     });

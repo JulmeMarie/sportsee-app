@@ -23,10 +23,7 @@ const ObjectifsChart = (props) => {
   }
 
   useEffect(() => {
-    let service = new UserAverageSessionService();
-
-    //Get data from mock
-    //setData(service.getAverageSessionDataMock(props.idUser));
+    let service = new UserAverageSessionService();;
 
     service.getAverageSessionData(props.idUser).then(data => {
       setData(data);
@@ -39,9 +36,9 @@ const ObjectifsChart = (props) => {
       <div className='dureeSession'>Durée moyenne de sessions</div>
       <ResponsiveContainer width="100%" height="70%">
         <LineChart width="100%" height="100%" data={data}>
-          <Line type="monotone" dataKey="duration" stroke="#8884d8" strokeWidth={2} />
+          <Line type="monotone" dataKey="duration" stroke="#ffff" strokeWidth={2} />
           <XAxis dataKey="day" strokeWidth={0} stroke="white" />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<CustomTooltip />} cursor={false} wrapperStyle={{ outline: 'none' }} />
         </LineChart>
       </ResponsiveContainer>
     </div>

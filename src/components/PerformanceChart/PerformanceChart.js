@@ -14,9 +14,6 @@ const PerformanceChart = (props) => {
   useEffect(() => {
     let service = new UserPeformanceService();
 
-    //Get data from mock
-    //setData(service.getDataMockByUserId(props.idUser));
-
     service.getDataByUserId(props.idUser).then(data => {
       setData(data);
     })

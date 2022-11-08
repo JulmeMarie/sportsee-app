@@ -17,9 +17,6 @@ const ActivityChart = (props) => {
 
     let service = new UserActivityService();
 
-    //Get data from mock 
-    // setData(service.getActivityDataMock()); 
-
     //Get data from the service
     service.getActivityData(props.idUser).then(data => {
       setData(data);
@@ -56,7 +53,7 @@ const ActivityChart = (props) => {
           <Bar barSize={10} dataKey="calories" unit="kcal" fill="#FF0000" />
           <XAxis />
           <YAxis orientation='right' />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(196,196,196,0.5' }} wrapperStyle={{ outline: 'none' }} />
         </BarChart>
       </ResponsiveContainer>
     </div>

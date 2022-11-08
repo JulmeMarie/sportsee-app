@@ -1,8 +1,9 @@
-import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
-import EggIcon from '@mui/icons-material/Egg';
-import AppleIcon from '@mui/icons-material/Apple';
-import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import { CardModel } from '../models/CardModel';
+import CaloriesIcon from '../images/Calories.png';
+import GlucidesIcon from '../images/Glucide.png';
+import LipidesIcon from '../images/Lipides.png';
+import ProteinesIcon from '../images/Protéines.png';
+
 
 /**
  * This class is used to process user datakeys
@@ -17,16 +18,16 @@ export class CardInfosService {
         let cardModel = null;
         switch (data.name.toLowerCase()) {
             case "calories":
-                cardModel = this.createModel(data, "kCal", <LocalFireDepartmentIcon />, "#FF0000", "rgba(255,0,0,0.1)");
+                cardModel = this.createModel(data, "kCal", CaloriesIcon, "#FF0000", "rgba(255,0,0,0.1)");
                 break;
             case "protéines":
-                cardModel = this.createModel(data, "g", <EggIcon />, "#4AB8FF", "rgba(74,184,255,0.1)");
+                cardModel = this.createModel(data, "g", ProteinesIcon, "#4AB8FF", "rgba(74,184,255,0.1)");
                 break;
             case "glucides":
-                cardModel = this.createModel(data, "g", <AppleIcon />, "#FDCC0C", "rgba(253,204,12,0.1)");
+                cardModel = this.createModel(data, "g", GlucidesIcon, "#FDCC0C", "rgba(253,204,12,0.1)");
                 break;
             case "lipides":
-                cardModel = this.createModel(data, "g", <LunchDiningIcon />, "#FD5181", "rgba(253,81,129,0.1)");
+                cardModel = this.createModel(data, "g", LipidesIcon, "#FD5181", "rgba(253,81,129,0.1)");
                 break;
             default:
                 break;

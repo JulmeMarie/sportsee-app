@@ -22,7 +22,7 @@ const CardInfos = (props) => {
     <div className="CardInfos" data-testid="CardInfos">
       {data &&
         <>
-          <div className='CardInfos-icon' style={data.style}>{data.icon} </div>
+          <div className='CardInfos-icon' style={data.style}><img src={data.icon} alt="icon" /> </div>
           <div className='CardInfos-details'>
             <div className='CardInfos-value'>{data.quantity} {data.unit}</div>
             <div className='CardInfos-name'>{data.name}</div>

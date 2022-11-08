@@ -21,9 +21,15 @@ export class UserAverageSessionService {
      * @returns a Promise
      */
     getAverageSessionData(userId) {
-        let url = "http://localhost:3000/user/" + userId + "/average-sessions";
 
         return new Promise((resolve, reject) => {
+            /* let theObjectives = [];
+            USER_AVERAGE_SESSIONS_MOCK.sessions.forEach(session => {
+                theObjectives.push(new ObjectifModel(this.getDay(session.day), session.sessionLength));
+            });
+            resolve(theObjectives); */
+
+            let url = "http://localhost:3000/user/" + userId + "/average-sessions";
             fetch(url).then(response => {
                 response.json().then(json => {
                     let theObjectives = [];
@@ -33,20 +39,8 @@ export class UserAverageSessionService {
                     resolve(theObjectives);
                 })
             }).catch(err => {
-                console.log("Erreur while calling the back")
+                reject(err);
             })
         });
-    }
-
-    /**
-     * This method allows to get user data from the data mock file
-     * @returns an Array
-     */
-    getAverageSessionDataMock() {
-        let theObjectives = [];
-        USER_AVERAGE_SESSIONS_MOCK.sessions.forEach(session => {
-            theObjectives.push(new ObjectifModel(this.getDay(session.day), session.sessionLength));
-        });
-        return theObjectives;
     }
 }
